@@ -1,0 +1,33 @@
+To create a MySQL database and table for storing news articles, you can follow these steps:
+
+Create a MySQL Database: First, you need to create a database to store your news articles. You can do this using the following SQL command:
+CREATE DATABASE blog;
+
+Use the Database: After creating the database, you need to switch to it to perform further operations. Use the following command:
+USE blog;
+
+Create a Table for News Articles: Now, create a table to store news articles with fields for title, content, image, description, and a column to indicate if the news is hot or not.
+CREATE TABLE news (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    img VARCHAR(255) NOT NULL,
+    description TEXT,
+    hot BOOLEAN NOT NULL DEFAULT FALSE
+);
+
+Insert News Articles: Finally, insert the news articles into the table. You can do this using the following SQL commands:
+
+INSERT INTO news (title, content, img, description, hot) VALUES
+('Title of News 1', 'Content of News 1', 'assets/images/dotanews1.webp', NULL, FALSE),
+('Title of News 2', 'Content of News 2', 'assets/images/news_es.jpg', NULL, FALSE),
+('Title of News 3', 'Content of News 3', 'assets/images/news dota2.jpg', NULL, FALSE),
+('Title of News 4', 'Content of News 4', 'assets/images/CSGO_popular.jpg', NULL, FALSE),
+('Title of News 5', 'Content of News 5', 'assets/images/CSGO_popular.jpg', NULL, FALSE),
+('Title of News 6', 'Content of News 6', 'assets/images/CSGO_popular.jpg', NULL, FALSE),
+('Title of News 7', 'Content of News 7', 'assets/images/CSGO_popular.jpg', NULL, FALSE),
+('Title of News 8', 'Content of News 8', 'assets/images/CSGO_popular.jpg', NULL, FALSE),
+('Title of News 9', 'Content of News 9', 'assets/images/CSGO_popular.jpg', NULL, FALSE),
+('Title of New News', 'Content of New News', 'assets/images/sunday_news.jpg', NULL, FALSE);
+
+This will create a table named "news" with the specified fields and insert the provided news articles into it.

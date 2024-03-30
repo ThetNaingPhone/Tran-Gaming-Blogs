@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background-color: #15141d;
+        }
+
+        .nav1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: rgb(23, 23, 23);
+            height: 50px;
+        }
+
+        .nav1 .nav .nav-item {
+            width: auto;
+            margin-left: 10px;
+            display: flex;
+        }
+
+        .nav1 .nav .nav-item .nav-link {
+            color: rgb(212, 212, 212);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .nav1 .nav .nav-item i {
+            margin-right: 10px;
+        }
+
+        .nav1 .signout {
+            padding-right: 20px;
+        }
+
+        .card-group .card p {
+            color: rgb(226, 226, 226);
+        }
+
+        .page-item .page-link {
+            background-color: rgb(155, 30, 30);
+            border-color: rgb(42, 8, 8);
+            color: rgb(195, 224, 253);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <nav class="nav1 position-fixed" style="z-index: 3;">
+            <div style="padding: 5px 0px 0px 80px; display:flex; width: 400px;">
+                <img style="width: 40px; height: 40px;" src="assets/images/Esport_logo.png" />
+                <h5 style="padding:7px 0px 0px 10px; color:white;">Tran Esport</h5>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col" style="margin-right:290px">
+                        <ul class="nav nav-underline justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Esport Blogs.php">
+                                    <i class="bi bi-house-door"></i> Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="watch.html">
+                                    <i class="bi bi-collection-play"></i> Watch
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="news.php">
+                                    <i class="bi bi-globe"></i> News
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactUs.html">
+                                    <i class="bi bi-person-lines-fill"></i> Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto signout">
+                <a href="SignIn.html" class="nav-link">
+                    <i style="color: white;" class="bi bi-box-arrow-left h4"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div style="padding: 60px 200px 50px 200px;">
+        <div>
+            <h6 style="color: rgb(170, 30, 30); font-family:Verdana, Geneva, Tahoma, sans-serif;">DOTA 2</h6>
+            <h1 class="text-white">To Copenhagen, we go: Dota 2’s The International returns to Europe in 2024</h1>
+            <p style="color: rgb(228, 237, 251)">The Danish capital will play host to two major esport tournaments this
+                year.</p>
+            <div class="row">
+                <p style="color: rgb(151, 154, 163); font-size: small;"><a style="color: white;text-decoration: none;"
+                        href="#">Nicholas Taifalos </a>
+                    |
+                    Published: Mar 9, 2024 6:29 AM GMT+6:30</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/dotanews1.webp" class="card-img-top" alt="dotanews1">
+            </div>
+            <p class="text-white mt-1">Image via Valve</p>
+            <div class="mt-5">
+                <p style="color:rgb(226, 226, 226);">Valve announced this year’s edition of Dota 2’s The International
+                    is
+                    making a long-awaited return to Europe today, with Copenhagen, Denmark revealed as the host for
+                    the 13th edition of the pinnacle event.</p>
+            </div>
+        </div>
+        <div>
+            <h4 class="mt-5" style="color: rgb(240, 240, 240);">Your Comment</h4>
+            <form>
+                <textarea class="form-control" aria-label="With textarea"
+                    style="background-color: rgb(240, 240, 240);"></textarea>
+                <div style="text-align: end;">
+                    <button type="submit" class="btn btn-primary w-25 mt-3"
+                        style="background-color: rgb(141, 17, 17); border-color: rgb(84, 27, 27); color: rgb(195, 224, 253);;">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="text-white mt-5">
+            <h3 class="mb-3">Related Contents</h3>
+            <div class="card-group">
+                <div class="card bg-dark">
+                    <a href="newsDetail.html"><img class="card-img" src="./assets/images/dota-dreamleague-s22.webp" alt="DreamLeague"></a>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">DreamLeague Season 22: Dota 2 schedule, results, teams,
+                            and
+                            more</h5>
+                        <p class="card-text">
+                            Nicholas Taifalos and others
+                        </p>
+                        <p class="card-text" style="color: rgb(184, 184, 184);">Mar 11, 2024</p>
+                    </div>
+                </div>
+                <div class="card bg-dark mx-2">
+                    <a href="newsDetail.html"><img class="card-img-top" src="./assets/images/dota-2-battle-pass.webp" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Dota 2 fans desperately want Valve to make one big change
+                            for
+                            TI 2024’s
+                            prize pool</h5>
+                        <p class="card-text">
+                            Nicholas Taifalos and others
+                        </p>
+                        <p class="card-text" style="color: rgb(184, 184, 184);">Mar 10, 2024</p>
+                    </div>
+                </div>
+                <div class="card bg-dark">
+                    <a href="newsDetail.html"><img class="card-img-top" src="./assets/images/dota-ti-2023.webp" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-white" style="color: rgb(184, 184, 184);">Dota 2’s The
+                            International
+                            2024: Location, dates, tickets, and more</h5>
+                        <p class="card-text">
+                            Nicholas Taifalos and others
+                        </p>
+                        <p class="card-text" style="color: rgb(184, 184, 184);">Mar 9, 2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <nav aria-label="Page navigation example bg-dark">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="newsDetail1.html" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="newsDetail2.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="newsDetail2.html">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="newsDetail2.html" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

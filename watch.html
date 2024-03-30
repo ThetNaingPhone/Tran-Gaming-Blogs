@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background-color: #15141d;
+        }
+
+        .carousel-inner .carousel-item .blogs {
+            display: flex;
+            justify-content: center;
+        }
+
+        .blogs .card-group {
+            width: 92%;
+        }
+
+        .blogs .card-group .card {
+            margin: 10px;
+            align-items: center;
+            background-color: #201e26;
+            color: white;
+        }
+
+        .watch {
+            padding: 0px 50px;
+        }
+
+        #watch .card {
+            background-color: #201e26;
+            color: white;
+        }
+
+        .bg-transparent-blue {
+            background-color: rgba(27, 27, 27, 0.5);
+            /* Adjust the alpha value as needed for transparency */
+        }
+
+        .bg-transparent-blue .card-footer {
+            padding: 0.5rem;
+            /* Adjust as needed */
+        }
+    </style>
+</head>
+
+<body class='container-fluid'>
+    <div class="row">
+        <nav class="nav1">
+            <div style="padding: 5px 0px 0px 80px; display:flex; width: 400px;">
+                <img style="width: 40px; height: 40px;" src="assets/images/Esport_logo.png" />
+                <h5 style="padding:7px 0px 0px 10px; color:white;">Tran Esport</h5>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col" style="margin-right:290px">
+                        <ul class="nav nav-underline justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Esport Blogs_home.php">
+                                    <i class="bi bi-house-door"></i> Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="watch.html">
+                                    <i class="bi bi-collection-play"></i> Watch
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="news.php">
+                                    <i class="bi bi-globe"></i> News
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactUs.html">
+                                    <i class="bi bi-person-lines-fill"></i> Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto signout">
+                <a href="SignIn.html" class="nav-link">
+                    <i class="bi bi-box-arrow-left h4"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var videoCards = [
+                {
+                    title: "Dota2",
+                    description: "Explore the latest gameplay strategies and updates in the world of Dota2 with this exciting video.",
+                    videoUrl: "https://www.youtube.com/embed/8mkmo1C8Ri0"
+                },
+                {
+                    title: "Dota2",
+                    description: "Delve deeper into the intricate mechanics and competitive scene of Dota2 with this insightful video.",
+                    videoUrl: "https://www.youtube.com/embed/rN8Ld2pMWZI"
+                },
+                {
+                    title: "Dota2",
+                    description: "Witness epic battles and intense moments from the Dota2 arena in this action-packed video.",
+                    videoUrl: "https://www.youtube.com/embed/Lnbq_SYWdDU"
+                },
+                {
+                    title: "Dota2",
+                    description: "Learn pro tips and strategies to dominate your opponents in Dota2 with this informative video.",
+                    videoUrl: "https://www.youtube.com/embed/Lnbq_SYWdDU"
+                },
+                {
+                    title: "PUBG",
+                    description: "Experience the adrenaline-pumping action and tactical gameplay of PUBG in this thrilling video.",
+                    videoUrl: "https://www.youtube.com/embed/K75pTOceKa8"
+                },
+                {
+                    title: "PUBG",
+                    description: "Discover the latest updates and new features introduced in the world of PUBG with this exciting video.",
+                    videoUrl: "https://www.youtube.com/embed/gwMPDzqW1-o"
+                },
+                {
+                    title: "Mobile Legends",
+                    description: "Embark on a journey through the epic battles and heroic legends of Mobile Legends in this captivating video.",
+                    videoUrl: "https://www.youtube.com/embed/rvrTWU0rdrM"
+                },
+                {
+                    title: "Mobile Legends",
+                    description: "Join the adventure and witness the breathtaking action of Mobile Legends in this exhilarating video.",
+                    videoUrl: "https://www.youtube.com/embed/8mkmo1C8Ri0"
+                },
+                {
+                    title: "Mobile Legends",
+                    description: "Unleash your skills and dominate the battlefield in Mobile Legends with insights from this inspiring video.",
+                    videoUrl: "https://www.youtube.com/embed/u6Z4ZBGGj78"
+                },
+                {
+                    title: "Mobile Legends",
+                    description: "Experience the thrill of victory and the agony of defeat in Mobile Legends with this epic video compilation.",
+                    videoUrl: "https://www.youtube.com/embed/6-b1w7jsJRo"
+                }
+            ];;
+
+            function addVideoCard(videoUrl, title, description, containerId) {
+                var container = document.getElementById(containerId);
+                var col = document.createElement("div");
+                col.classList.add("col");
+                var card = document.createElement("div");
+                card.classList.add("card", "h-100");
+                var ratioDiv = document.createElement("div");
+                ratioDiv.classList.add("ratio", "ratio-16x9");
+                var iframe = document.createElement("iframe");
+                iframe.width = "1424";
+                iframe.height = "652";
+                iframe.src = videoUrl;
+                iframe.title = "YouTube video player";
+                iframe.frameborder = "0";
+                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+                iframe.allowfullscreen = true;
+                var cardBody = document.createElement("div");
+                cardBody.classList.add("card-body");
+                var cardTitle = document.createElement("h5");
+                cardTitle.classList.add("card-title");
+                cardTitle.textContent = title;
+                var cardText = document.createElement("p");
+                cardText.classList.add("card-text");
+                cardText.textContent = description;
+                cardBody.appendChild(cardTitle);
+                cardBody.appendChild(cardText);
+                ratioDiv.appendChild(iframe);
+                card.appendChild(ratioDiv);
+                card.appendChild(cardBody);
+                col.appendChild(card);
+                container.appendChild(col);
+            }
+
+            videoCards.forEach(function (card) {
+                if (card.title === "Dota2") {
+                    addVideoCard(card.videoUrl, card.title, card.description, "dota2VideoContainer");
+                } else if (card.title === "PUBG") {
+                    addVideoCard(card.videoUrl, card.title, card.description, "pubgVideoContainer");
+                } else if (card.title === "Mobile Legends") {
+                    addVideoCard(card.videoUrl, card.title, card.description, "mobileLegendsVideoContainer");
+                }
+            });
+        });
+
+    </script>
+
+    <div id="watch" class="content">
+        <div class="watch">
+            <div>
+                <h3 style="color: rgb(207, 38, 0);"><img style="height: 45px; width: 70px; border-radius: 20%;"
+                        src="assets/images/header_dota2_logo.jpg">Dota2</h3>
+            </div>
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="dota2VideoContainer" back>
+
+            </div>
+            <div style="margin-top: 80px;">
+                <h3 style="color: rgb(245, 225, 0);">
+                    <img style="height: 45px; width: 50px; border-radius: 20%; margin-right: 10px;"
+                        src="assets/images/pubg_header.jpg">PUBG
+                </h3>
+            </div>
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="pubgVideoContainer">
+
+            </div>
+            <div style="margin-top: 80px;">
+                <h3 style="color: rgb(215, 212, 255);">
+                    <span style=" border-radius: 20%;">
+                        <img style="height: 50px; width: 50px; padding: 3px;border-radius: 20%;"
+                            src="assets/images/ml_header.jpg">
+                    </span>Mobile Legend
+                </h3>
+            </div>
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="mobileLegendsVideoContainer">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
